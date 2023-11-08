@@ -1,5 +1,4 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import { SupabaseProvider } from "@src/Contexts/SupabaseContext";
 import store from "@src/store";
 import "@src/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -10,11 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <ClerkProvider>
-        <SupabaseProvider>
-          <ThemeProvider attribute="class">
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </SupabaseProvider>
+        <ThemeProvider attribute="class">
+          <Component {...pageProps} />
+        </ThemeProvider>
       </ClerkProvider>
     </Provider>
   );
