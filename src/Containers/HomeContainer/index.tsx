@@ -29,7 +29,6 @@ const HomeContainer: React.FunctionComponent<IHomeContainerProps> = (props) => {
         bio: "Hello this is Vipin Swe at startup",
       })
       .select();
-    console.log(data);
   };
 
   const prevStep = () => {
