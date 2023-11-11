@@ -11,9 +11,9 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
-    { title: "Services", path: "/services" },
+    { title: "Search", path: "/candidate/search" },
+    { title: "Dashboard", path: "candidate/dashboard" },
+    { title: "Settings", path: "candidate/Settings" },
   ];
 
   const toggleMobileMenu = () => {
