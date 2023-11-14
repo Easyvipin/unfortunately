@@ -10,7 +10,7 @@ const CandidateLayout: React.FunctionComponent<ICandidateLayoutProps> = ({
   children,
 }) => {
   return (
-    <div>
+    <div className="bg-background">
       <UserNavbar />
       <AlignedMain>{children}</AlignedMain>
     </div>

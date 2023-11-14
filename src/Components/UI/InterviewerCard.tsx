@@ -10,11 +10,13 @@ import {
   FiStar,
 } from "react-icons/fi";
 
-interface IInterviewerCardProps {}
+interface IInterviewerCardProps {
+  onInfo: () => void;
+}
 
-const InterviewerCard: React.FunctionComponent<IInterviewerCardProps> = (
-  props
-) => {
+const InterviewerCard: React.FunctionComponent<IInterviewerCardProps> = ({
+  onInfo,
+}) => {
   return (
     <div className="border w-[100%] md:w-[22rem] lg:[25rem] h-[24rem] p-2 md:p-6 rounded-lg bg-primary text-card relative overflow-hidden">
       <div className="flex gap-4 items-center justify-center pb-4 border-b-[0.2px] border-gray-500  border-muted">
@@ -61,7 +63,10 @@ const InterviewerCard: React.FunctionComponent<IInterviewerCardProps> = (
           <button className=" bg-blue-600 p-4 w-[85%] text-md font-bold flex justify-center items-center gap-2 ">
             Book Slot <FiChevronsRight className="inline text-2xl" />
           </button>
-          <button className="flex justify-center items-center text-xl w-[15%] bg-yellow-300 text-accent-foreground">
+          <button
+            className="flex justify-center items-center text-xl w-[15%] bg-yellow-300 text-accent-foreground"
+            onClick={onInfo}
+          >
             <FiCornerUpLeft />
           </button>
         </div>
