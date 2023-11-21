@@ -8,9 +8,16 @@ const SearchContainer: React.FunctionComponent<ISearchContainerProps> = (
   props
 ) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hideScrollbar, setHideScrollbar] = useState(false);
 
   const handleOnInfo = () => {
     setIsOpen(!isOpen);
+    toggleScrollVisibility();
+  };
+
+  const toggleScrollVisibility = () => {
+    setHideScrollbar((prev) => !prev);
+    document.body.classList.toggle("scroll-hidden");
   };
 
   return (
@@ -36,6 +43,7 @@ const SearchContainer: React.FunctionComponent<ISearchContainerProps> = (
         isOpen={isOpen}
         closeDialog={() => {
           setIsOpen(!isOpen);
+          toggleScrollVisibility();
         }}
       />
     </div>

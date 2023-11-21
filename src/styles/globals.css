@@ -80,3 +80,7 @@
 body {
   overflow-x: hidden;
 }
+
+body.scroll-hidden {
+  overflow-y: hidden;
+}

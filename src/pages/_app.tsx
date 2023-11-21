@@ -20,11 +20,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <Provider store={store}>
-      <ClerkProvider>
-        <ThemeProvider attribute="class">
-          {getLayout(<Component {...pageProps} />)}
-        </ThemeProvider>
-      </ClerkProvider>
+      <ClerkProvider>{getLayout(<Component {...pageProps} />)}</ClerkProvider>
     </Provider>
   );
 }
