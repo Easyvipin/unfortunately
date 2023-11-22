@@ -44,7 +44,7 @@ const CandidatePage: NextPageWithLayout = () => {
         <Loader
           size={35}
           loading={isLoading}
-          color={"white"}
+          color={"hsl(20.5 90.2% 48.2%)"}
           fullScreen={true}
           speed={2}
         />

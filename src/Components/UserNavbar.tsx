@@ -21,7 +21,7 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
   };
 
   return (
-    <nav className="bg-white dark:bg-transparent w-full border-b md:static border-gray-300 px-2">
+    <nav className="w-full border-b-[0.5px] md:static px-2">
       <div className="items-center md:w-[80%] mx-auto flex justify-between">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href={""}>
@@ -60,9 +60,9 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
         </div>
         <div className="hidden md:flex items-center">
           <div className="md:flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0">
-            <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="justify-center items-center text-muted-foreground space-y-8 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => (
-                <li key={idx} className="text-gray-600 hover:text-indigo-600">
+                <li key={idx} className=" hover:text-gray-300">
                   <a href={item.path} onClick={toggleMobileMenu}>
                     {item.title}
                   </a>
@@ -86,7 +86,7 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
           </div>
           <ul className="justify-center items-center space-y-2 md:flex md:space-x-6 md:space-y-0 mt-4">
             {navigation.map((item, idx) => (
-              <li key={idx} className="text-gray-600 hover:text-indigo-600">
+              <li key={idx} className="hover:text-indigo-600">
                 <a href={item.path} onClick={toggleMobileMenu}>
                   {item.title}
                 </a>

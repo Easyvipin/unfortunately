@@ -48,7 +48,7 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
     return (
       <Loader
         size={35}
-        color="#000"
+        color="hsl(20.5 90.2% 48.2%)"
         loading={isLoading}
         fullScreen={true}
         speed={2}
@@ -61,7 +61,7 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
       <>
         <header>
           <nav className="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
-            <div className="flex justify-between">
+            <div className="flex">
               <a href="">
                 <img
                   src="https://www.floatui.com/logo.svg"
@@ -70,42 +70,6 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
                   alt="Float UI logo"
                 />
               </a>
-              <button
-                className="text-gray-500 outline-none md:hidden"
-                onClick={() => setState(!state)}
-              >
-                {state ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
             </div>
             <ul
               className={`flex-1 justify-between mt-12 md:flex md:mt-0 ${
@@ -113,7 +77,6 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
               }`}
             >
               <li className="order-2 pb-5 md:pb-0 flex  gap-12">
-                <ThemeToggler />
                 <a
                   href=""
                   className="py-3 px-6 rounded-md shadow-md text-white text-center bg-indigo-500 focus:shadow-none block md:inline"
@@ -133,9 +96,9 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
         </header>
         <section className="mt-24 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
           <div className="text-center space-y-4">
-            <h1 className="text-gray-800 dark:text-gray-300 font-bold text-4xl md:text-5xl">
+            <h1 className="font-bold text-4xl md:text-5xl">
               Mock it!
-              <span className="text-indigo-600"> Crack it.</span>
+              <span className=""> Crack it.</span>
             </h1>
             <p className="text-gray-500 hover:text-gray-300 max-w-xl mx-auto leading-relaxed">
               An online platform connecting job seekers with seasoned
@@ -153,7 +116,7 @@ const WelcomeContainer: React.FunctionComponent<IWelcomeContainerProps> = (
             </button>
             <a
               href=""
-              className="px-10 py-3.5 w-full text-gray-500 dark:text-gray-300 text-center border rounded-md duration-300 dark:border-indigo-600 hover:text-indigo-600 hover:shadow block sm:w-auto"
+              className="px-10 py-3.5 w-full  text-center border rounded-md duration-300 hover:shadow block sm:w-auto"
             >
               Try it out
             </a>

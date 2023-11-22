@@ -11,7 +11,7 @@ interface ILoaderProps {
 
 const Loader: React.FunctionComponent<ILoaderProps> = ({
   size = 35,
-  color,
+  color = "hsl(20.5 90.2% 48.2%)",
   loading,
   speed = 1,
   fullScreen = false,

@@ -32,13 +32,13 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
       {isOpen && (
         <div className="fixed inset-0 z-50 backdrop-filter backdrop-blur-md">
           <motion.div
-            className="absolute w-[100%] md:w-[70%] lg:w-[60%] h-[100vh] right-0 bg-white p-4 border"
+            className="absolute w-[100%] md:w-[70%] bg-popover text-primary-foreground lg:w-[60%] h-[100vh] right-0  p-4 border"
             variants={DialogVariants}
             animate={isOpen ? "visible" : "hidden"}
           >
             <FiX
               onClick={closeDialog}
-              className="absolute top-5 right-10 text-4xl"
+              className="absolute top-5 right-10 text-4xl text-muted-foreground hover:text-primary"
             />
             <div className="font-inter h-full overflow-auto">
               <div className="flex-col  md:flex md:flex-row  gap-5 w-[90%] flex-wrap">
@@ -48,7 +48,7 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
                 <div className="flex-1 flex flex-col justify-between mt-10 md:mt-0">
                   <div>
                     <h2 className="text-2xl font-semibold">John Doe</h2>
-                    <p>
+                    <p className="text-muted-foreground">
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Minima aspernatur porro consequatur incidunt, itaque
                       inventore?
@@ -69,7 +69,7 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
                 </h2>
                 <div className="flex flex-col gap-2  mt-7">
                   <div className="border px-4 py-4 rounded">
-                    <p className="text-md font-inter font-medium text-gray-600">
+                    <p className="text-md font-inter text-muted-foreground">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Cum modi quasi placeat illo ex doloribus adipisci ducimus
                       hic id alias ipsam itaque perferendis consequatur pariatur
@@ -77,7 +77,7 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
                       mollitia, omnis odio odit unde? Cupiditate, consectetur
                       ex.
                     </p>
-                    <div className="flex justify-between items-center mt-2 flex-wrap-reverse gap-2">
+                    <div className="flex justify-between items-center mt-7 flex-wrap-reverse gap-2">
                       <div className="flex gap-2">
                         <Avatar>
                           <AvatarImage
@@ -94,130 +94,7 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
                             </div>
                           </div>
 
-                          <span className=" text-xs text-gray-500">
-                            12th Aug , 2023
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex gap-2 flex-wrap">
-                        <Badge>Free Resource</Badge>
-                        <Badge>Good</Badge>
-                        <Badge>1+ hr</Badge>
-                        <Badge>50% off</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2  mt-7">
-                  <div className="border px-4 py-4 rounded">
-                    <p className="text-md font-inter font-medium text-gray-600">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Cum modi quasi placeat illo ex doloribus adipisci ducimus
-                      hic id alias ipsam itaque perferendis consequatur pariatur
-                      recusandae nobis nihil ea earum distinctio accusantium
-                      mollitia, omnis odio odit unde? Cupiditate, consectetur
-                      ex.
-                    </p>
-                    <div className="flex justify-between items-center mt-2 flex-wrap-reverse gap-2">
-                      <div className="flex gap-2">
-                        <Avatar>
-                          <AvatarImage
-                            className=""
-                            width={"40rem"}
-                            src="https://github.com/shadcn.png"
-                          />
-                        </Avatar>
-                        <div className="flex flex-col">
-                          <div className="flex justify-center items-center gap-1">
-                            <div>Maxwell sane father luis</div>
-                            <div className="w-[15px] h-[15px] rounded-full bg-green-400 text-[#fafafa] flex justify-center items-center text-xs">
-                              <FiCheck />
-                            </div>
-                          </div>
-
-                          <span className=" text-xs text-gray-500">
-                            12th Aug , 2023
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex gap-2 flex-wrap">
-                        <Badge>Free Resource</Badge>
-                        <Badge>Good</Badge>
-                        <Badge>1+ hr</Badge>
-                        <Badge>50% off</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2  mt-7">
-                  <div className="border px-4 py-4 rounded">
-                    <p className="text-md font-inter font-medium text-gray-600">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Cum modi quasi placeat illo ex doloribus adipisci ducimus
-                      hic id alias ipsam itaque perferendis consequatur pariatur
-                      recusandae nobis nihil ea earum distinctio accusantium
-                      mollitia, omnis odio odit unde? Cupiditate, consectetur
-                      ex.
-                    </p>
-                    <div className="flex justify-between items-center mt-2 flex-wrap-reverse gap-2">
-                      <div className="flex gap-2">
-                        <Avatar>
-                          <AvatarImage
-                            className=""
-                            width={"40rem"}
-                            src="https://github.com/shadcn.png"
-                          />
-                        </Avatar>
-                        <div className="flex flex-col">
-                          <div className="flex justify-center items-center gap-1">
-                            <div>Maxwells</div>
-                            <div className="w-[15px] h-[15px] rounded-full bg-green-400 text-[#fafafa] flex justify-center items-center text-xs">
-                              <FiCheck />
-                            </div>
-                          </div>
-
-                          <span className=" text-xs text-gray-500">
-                            12th Aug , 2023
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex gap-2 flex-wrap">
-                        <Badge>Free Resource</Badge>
-                        <Badge>Good</Badge>
-                        <Badge>1+ hr</Badge>
-                        <Badge>50% off</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2  mt-7">
-                  <div className="border px-4 py-4 rounded">
-                    <p className="text-md font-inter font-medium text-gray-600">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Cum modi quasi placeat illo ex doloribus adipisci ducimus
-                      hic id alias ipsam itaque perferendis consequatur pariatur
-                      recusandae nobis nihil ea earum distinctio accusantium
-                      mollitia, omnis odio odit unde? Cupiditate, consectetur
-                      ex.
-                    </p>
-                    <div className="flex justify-between items-center mt-2 flex-wrap-reverse gap-2">
-                      <div className="flex gap-2">
-                        <Avatar>
-                          <AvatarImage
-                            className=""
-                            width={"40rem"}
-                            src="https://github.com/shadcn.png"
-                          />
-                        </Avatar>
-                        <div className="flex flex-col">
-                          <div className="flex justify-center items-center gap-1">
-                            <div>Maxwell sane father luis</div>
-                            <div className="w-[15px] h-[15px] rounded-full bg-green-400 text-[#fafafa] flex justify-center items-center text-xs">
-                              <FiCheck />
-                            </div>
-                          </div>
-
-                          <span className=" text-xs text-gray-500">
+                          <span className=" text-xs text-muted-foreground">
                             12th Aug , 2023
                           </span>
                         </div>
