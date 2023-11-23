@@ -12,8 +12,8 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
 
   const navigation = [
     { title: "Search", path: "/candidate/search" },
-    { title: "Dashboard", path: "candidate/dashboard" },
-    { title: "Settings", path: "candidate/Settings" },
+    { title: "Dashboard", path: "/candidate/dashboard" },
+    { title: "Settings", path: "/candidate/settings" },
   ];
 
   const toggleMobileMenu = () => {
@@ -87,9 +87,9 @@ const UserNavbar: React.FunctionComponent<IUserNavbarProps> = (props) => {
           <ul className="justify-center items-center space-y-2 md:flex md:space-x-6 md:space-y-0 mt-4">
             {navigation.map((item, idx) => (
               <li key={idx} className="hover:text-indigo-600">
-                <a href={item.path} onClick={toggleMobileMenu}>
+                <Link href={item.path} onClick={toggleMobileMenu}>
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

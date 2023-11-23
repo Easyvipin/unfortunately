@@ -30,11 +30,17 @@ const InterviewerInfo: React.FunctionComponent<IInterviewerInfoProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 z-50 backdrop-filter backdrop-blur-md">
+        <div
+          className="fixed inset-0 z-50 backdrop-filter backdrop-blur-md"
+          onClick={closeDialog}
+        >
           <motion.div
             className="absolute w-[100%] md:w-[70%] bg-popover text-primary-foreground lg:w-[60%] h-[100vh] right-0  p-4 border"
             variants={DialogVariants}
             animate={isOpen ? "visible" : "hidden"}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
           >
             <FiX
               onClick={closeDialog}
