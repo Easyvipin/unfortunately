@@ -57,7 +57,7 @@ const DashboardContainer: React.FunctionComponent<IDashboardContainerProps> = (
             <div className="hidden md:block">Contacts</div> <FiSmartphone />
           </TabsTrigger>
         </TabsList>
-        <div className="mt-10 border w-full">
+        <div className="mt-10 w-full md:w-[90%] border rounded px-20 py-10">
           <TabsContent value="performance">
             <Performance />
           </TabsContent>
