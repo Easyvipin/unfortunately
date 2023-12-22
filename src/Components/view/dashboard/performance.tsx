@@ -2,6 +2,7 @@ import StatsCard from "@components/UI/StatsCard";
 import React from "react";
 
 import dynamic from "next/dynamic";
+import SkillsChart from "@components/UI/charts/SkillsChart";
 const GaugeChart = dynamic(() => import("react-gauge-chart"), { ssr: false });
 
 interface IPerformanceProps {}
@@ -37,6 +38,14 @@ const Performance: React.FunctionComponent<IPerformanceProps> = (props) => {
               Interview Ready!
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-4 flex flex-col gap-2">
+        <h2 className="text-xl racking-tighter  text-muted-foreground">
+          Skills
+        </h2>
+        <div className="flex gap-8 flex-wrap justify-start h-[15rem] w-[15rem] border">
+          <SkillsChart />
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import {
   FiStar,
 } from "react-icons/fi";
 import { Button } from "./button";
+import { useRouter } from "next/router";
 
 interface IInterviewerCardProps {
   onInfo: () => void;
@@ -18,6 +19,12 @@ interface IInterviewerCardProps {
 const InterviewerCard: React.FunctionComponent<IInterviewerCardProps> = ({
   onInfo,
 }) => {
+  const router = useRouter();
+
+  const redirectToBook = (id: string) => {
+    router.push(`book?id=${id}`);
+  };
+
   return (
     <div className="border w-[100%] md:w-[22rem] lg:[25rem] h-[24rem] p-2 md:p-6 bg-card text-card-foreground relative overflow-hidden rounded-lg ">
       <div className="flex gap-4 items-center justify-center pb-4 border-b-[0.2px] border-primary">
@@ -65,7 +72,10 @@ const InterviewerCard: React.FunctionComponent<IInterviewerCardProps> = ({
       </div>
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex">
-          <Button className="p-4 w-[85%] text-md font-bold flex justify-center items-center gap-2 rounded-none ">
+          <Button
+            className="p-4 w-[85%] text-md font-bold flex justify-center items-center gap-2 rounded-none"
+            onClick={() => redirectToBook("asdasd-asdsad")}
+          >
             Book Slot <FiChevronsRight className="inline text-2xl" />
           </Button>
           <button
