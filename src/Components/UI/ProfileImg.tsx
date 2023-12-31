@@ -4,8 +4,8 @@ import { FiEdit } from "react-icons/fi";
 
 interface IProfileImgProps {
   src: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   alt: string;
   editAction?: boolean;
   editHandler?: boolean;
@@ -13,8 +13,8 @@ interface IProfileImgProps {
 
 const ProfileImg: React.FunctionComponent<IProfileImgProps> = ({
   src,
-  width,
-  height,
+  width = 250,
+  height = 200,
   alt,
   editAction,
   editHandler,

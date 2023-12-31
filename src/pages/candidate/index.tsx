@@ -10,7 +10,6 @@ import { NextPageWithLayout } from "../_app";
 
 const CandidatePage: NextPageWithLayout = () => {
   const { userId } = useAuth();
-  const [isUserSetup, setIsUserIsSetup] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
@@ -22,21 +21,16 @@ const CandidatePage: NextPageWithLayout = () => {
         .eq("userid", userId);
 
       if (data && data.length > 0) {
-        setIsUserIsSetup(true);
+        router.push("/candidate/search");
+      } else {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     if (userId) {
       getFullname();
     }
-  }, [userId]);
-
-  useEffect(() => {
-    if (isUserSetup === true) {
-      router.push("/candidate/search");
-    }
-  }, [isUserSetup, router]);
+  }, [userId, router]);
 
   return (
     <>
