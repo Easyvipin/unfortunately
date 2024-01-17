@@ -1,6 +1,8 @@
 import InterviewerCard from "@components/UI/InterviewerCard";
 import InterviewerInfo from "@components/view/IntrerviewerInfo";
 import React, { useState } from "react";
+import { useFilter } from "./hooks";
+import { FRONTEND_SKILLS } from "@utils/constants";
 
 interface ISearchContainerProps {}
 
@@ -9,6 +11,12 @@ const SearchContainer: React.FunctionComponent<ISearchContainerProps> = (
 ) => {
   const [isOpen, setIsOpen] = useState(false);
   const [hideScrollbar, setHideScrollbar] = useState(false);
+
+  const { data } = useFilter({
+    skills: [FRONTEND_SKILLS.JAVASCRIPT],
+  });
+
+  console.log(data);
 
   const handleOnInfo = () => {
     setIsOpen(!isOpen);

@@ -22,3 +22,8 @@ export const techProfessions: { label: string; value: string }[] = [
   { label: "UX/UI Designer", value: "ux_ui_designer" },
   { label: "Cybersecurity Analyst", value: "cybersecurity_analyst" },
 ];
+
+export const FRONTEND_SKILLS = {
+  JAVASCRIPT: "JavaScript",
+  PYTHON: "Python",
+};
